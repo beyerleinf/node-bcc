@@ -6,7 +6,7 @@
     ],
     "arrow-return-shorthand": true,
     "ban": [
-      true
+      true,
       {
         "name": "parseFloat",
         "message": "tsstyle#type-coercion"

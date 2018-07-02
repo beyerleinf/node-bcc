@@ -1,4 +1,5 @@
 --reporter spec
+--reporter json-stream
 --require ts-node/register
 --require source-map-support/register
 --full-trace

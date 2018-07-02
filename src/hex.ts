@@ -21,8 +21,8 @@ export class Hex {
    *
    * **Output:**
    * ``` js
-   ['AA', 'BB', 'CC', 'DD', 'EE', 'FF']
-   ```
+   * ['AA', 'BB', 'CC', 'DD', 'EE', 'FF']
+   * ```
    *
    * @param {string} hex
    * @returns {string[]|null}

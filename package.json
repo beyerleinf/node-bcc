@@ -7,7 +7,9 @@
   "scripts": {
     "build": "tsc",
     "test": "nyc mocha",
+    "codecov": "codecov -f coverage/coverage-final.json",
     "doc": "typedoc",
+    "tslint": "tslint --project ./tsconfig.json",
     "release": "standard-version && git push --follow-tags origin master && npm publish"
   },
   "repository": {
@@ -34,12 +36,14 @@
     "@types/node": "^10.5.0",
     "@types/sinon": "^5.0.1",
     "chai": "^4.1.2",
+    "codecov": "^3.0.2",
     "mocha": "^5.2.0",
     "nyc": "^12.0.2",
     "sinon": "^6.0.1",
     "source-map-support": "^0.5.6",
     "standard-version": "^4.4.0",
     "ts-node": "^7.0.0",
+    "tslint": "^5.10.0",
     "typedoc": "^0.11.1",
     "typescript": "^2.9.2"
   },
