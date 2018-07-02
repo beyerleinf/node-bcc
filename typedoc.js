@@ -1,0 +1,15 @@
+module.exports = {
+  src: ['./src'],
+  mode: 'file',
+  includeDeclarations: true,
+  tsconfig: 'tsconfig.json',
+  excludePrivate: true,
+  excludeProtected: true,
+  excludeExternals: true,
+  readme: 'README.md',
+  name: 'node-bcc',
+  ignoreCompilerErrors: true,
+  plugin: 'none',
+  listInvalidSymbolLinks: true,
+  out: './docs/',
+};

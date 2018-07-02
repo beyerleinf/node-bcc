@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.google.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist"
+  },
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "src/**/*.spec.ts",
+    "./node_modules"
+  ]
+}

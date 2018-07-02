@@ -1,0 +1,7 @@
+--reporter spec
+--require ts-node/register
+--require source-map-support/register
+--full-trace
+--trace-warnings
+--exit
+src/**/*.spec.ts
