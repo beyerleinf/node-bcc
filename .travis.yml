@@ -7,18 +7,26 @@ os:
 - linux
 language: node_js
 node_js:
+- '8'
 - '6'
 - '7'
-- '8'
 - '9'
 - '10'
 before_install:
+# package-lock.json was introduced in npm@5
+- '[[ $(node -v) =~ ^v9.*$ ]] || npm install -g npm@latest' # skipped when using node 9
 - npm set progress false
+- npm install -g greenkeeper-lockfile@1
 install:
 - npm install
+before_script: greenkeeper-lockfile-update
 script:
 - npm run tslint
 - npm run build
 - npm test
+after_script: greenkeeper-lockfile-upload
 after_success:
 - npm run codecov
+env:
+  global:
+    secure: DVQ7zMeJeRKhIiOq8SmG2hPdUBRiDXK2GuLf2H7BFQj6zeXPjeHxP+kVs5g8fgKRv7+J42J232CichBrU2iQYgW2B3fnTLTpuoaNcVb0xSGQnDbNxcnSNJjEqBjJIwlRFjTTjbeTP8HHaizNt9C3fCvJNPI95pe5S7weZB/kdJmY2aG5mA8+S8a94izbjlg21Sf+iYgFjmnzz3XNCS4xHWYImoIiteEG3XKMIEOMLMiV1YXrxUgRf9HpHrbe7Qvfj9H6RPCKCUcONGtbYY6FdYvIPrV7l5xaw6kvgaUFOAW/HGW2xAacFMruyANtiiKLuKdLW/PNs98LhlI10tPn2Q3JUX3/djTkmMsE9uQ82YGvNRkZ4Qi5kotNZ5Oeu+hk5WInOJH/Ie4NuWW6cWbFKgYuifxrk444qz8pNyqFg97KMu9LCXSGHbVyqcRfvlj26GoQzd2JgTVaQ89Zx/SY6IVqro25nciSZv6W8kv3NpyMAsKvT1/b41lnPhuhuswpF1TTqiUoFsSaHvVQn+5BAuFYLrAgxVmS0aIqItgoQAaqdxSCEpj8u0yDl/AZi8PIzX083b2TBcpE5VthXpZuACn1na3JnGzgAyBzDnpY0duXYVcmyW1AHPwtXWC/KkrV1XT6NEqz5w2I4aaUbsVistwLzGJELhKCFVbZSRq+klQ=
