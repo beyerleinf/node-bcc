@@ -74,14 +74,14 @@ export class Hex {
       return null;
     }
 
-    array.forEach((num) => {
+    for (const num of array) {
       if (num < 16) {
         result += `0${num.toString(16)}`;
-        return;
+        continue;
       }
 
       result += num.toString(16);
-    });
+    }
 
     if (uppercase) {
       return result.toUpperCase();
@@ -89,4 +89,6 @@ export class Hex {
 
     return result.toLowerCase();
   }
+
+
 }

@@ -50,4 +50,13 @@ describe('bcc.calculate', () => {
     stub.restore();
     validateStub.restore();
   });
+
+  it('should return correctly calculated bcc with number array', () => {
+    const stub = sinon.stub(Helper, 'checkArray').returns(true);
+    const validateStub = sinon.stub(Hex.prototype, 'validate').returns(true);
+
+    expect(bcc.calculate([1, 2, 3, 4])).to.equal(4);
+    stub.restore();
+    validateStub.restore();
+  });
 });

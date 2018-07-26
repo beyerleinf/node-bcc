@@ -19,19 +19,60 @@ export class Bcc {
    * ### Output
    * `4`
    *
-   * @param {string[]} messageBytes The bytes of the message as a hex string.
+   * @param {string[]|number[]} message The bytes of the message as a hex string or as a number array representing the bytes as decimal numbers.
    * @returns {number}
    */
-  calculate(messageBytes: string[]): number {
+  calculate(message: string[]): number;
+
+  /**
+   * This function calculates a Block Check Character for the given array of numbers.
+   *
+   * ### Example
+   *
+   * ``` ts
+   * console.log(calculateBcc([1, 2, 3, 4]));
+   * ```
+   *
+   * ### Output
+   * `4`
+   *
+   * @param {string[]|number[]} message The bytes of the message as a hex string or as a number array representing the bytes as decimal numbers.
+   * @returns {number}
+   */
+  calculate(message: number[]): number;
+
+  /**
+   * This function calculates a Block Check Character for the given array of `hex` strings.
+   *
+   * ### Example
+   *
+   * ``` ts
+   * console.log(calculateBcc(['01', '02', '03', '04']));
+   * ```
+   * ``` ts
+   * console.log(calculateBcc([1, 2, 3, 4]));
+   * ```
+   *
+   * ### Output
+   * `4`
+   *
+   * @param {string[]|number[]} message The bytes of the message as a hex string or as a number array representing the bytes as decimal numbers.
+   * @returns {number}
+   */
+  calculate(message: string[]|number[]): number {
     let bcc: number = 0x00;
 
-    if (!Helper.checkArray(messageBytes)) {
+    if (!Helper.checkArray(message)) {
       return -1;
     }
 
-    messageBytes.forEach(element => {
-      bcc ^= parseInt(element, 16);
-    });
+    for (const byte of message) {
+      if (typeof byte === 'string') {
+        bcc ^= parseInt(byte, 16);
+      } else {
+        bcc ^= byte;
+      }
+    }
 
     return bcc;
   }
