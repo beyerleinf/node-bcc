@@ -24,11 +24,12 @@ export class Hex {
    * ['AA', 'BB', 'CC', 'DD', 'EE', 'FF']
    * ```
    *
+   * @static
    * @param {string} hex
    * @returns {string[]|null}
    * @memberof Hex
    */
-  split(hex: string): string[]|null {
+  static split(hex: string): string[]|null {
     const chunks: string[] = [];
 
     if (!Helper.checkString(hex)) {
@@ -45,11 +46,12 @@ export class Hex {
   /**
    * Validates the given hexadecimal string.
    *
+   * @static
    * @param {string} hex The hexadecimal string to validate.
    * @returns {boolean} Whether the given string is a valid hexadecimal string.
    * @memberof Hex
    */
-  validate(hex: string): boolean {
+  static validate(hex: string): boolean {
     const regExp = /^[-+]?[0-9A-Fa-f]+\.?[0-9A-Fa-f]*?$/;
 
     if (!Helper.checkString(hex)) {
@@ -62,12 +64,13 @@ export class Hex {
   /**
    * Converts the given array of numbers to a hexadecimal string.
    *
+   * @static
    * @param {number[]} array The array to convert.
    * @param {boolean} [uppercase] Whether the string should be uppercase.
    * @returns {string|null} The given array of numbers as a hexadecimal string.
    * @memberof Hex
    */
-  toHexString(array: number[], uppercase?: boolean): string|null {
+  static toHexString(array: number[], uppercase?: boolean): string|null {
     let result = '';
 
     if (!Helper.checkArray(array)) {
@@ -89,6 +92,4 @@ export class Hex {
 
     return result.toLowerCase();
   }
-
-
 }

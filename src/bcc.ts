@@ -19,10 +19,11 @@ export class Bcc {
    * ### Output
    * `4`
    *
+   * @static
    * @param {string[]|number[]} message The bytes of the message as a hex string or as a number array representing the bytes as decimal numbers.
    * @returns {number}
    */
-  calculate(message: string[]): number;
+  static calculate(message: string[]): number;
 
   /**
    * This function calculates a Block Check Character for the given array of numbers.
@@ -36,10 +37,11 @@ export class Bcc {
    * ### Output
    * `4`
    *
+   * @static
    * @param {string[]|number[]} message The bytes of the message as a hex string or as a number array representing the bytes as decimal numbers.
    * @returns {number}
    */
-  calculate(message: number[]): number;
+  static calculate(message: number[]): number;
 
   /**
    * This function calculates a Block Check Character for the given array of `hex` strings.
@@ -56,10 +58,11 @@ export class Bcc {
    * ### Output
    * `4`
    *
+   * @static
    * @param {string[]|number[]} message The bytes of the message as a hex string or as a number array representing the bytes as decimal numbers.
    * @returns {number}
    */
-  calculate(message: string[]|number[]): number {
+  static calculate(message: string[]|number[]): number {
     let bcc: number = 0x00;
 
     if (!Helper.checkArray(message)) {

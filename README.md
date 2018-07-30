@@ -1,4 +1,4 @@
-![Maintenance](https://img.shields.io/maintenance/yes/2018.svg?style=flat-square) [![license](https://img.shields.io/github/license/beyerleinf/node-bcc.svg?style=flat-square)](https://github.com/beyerleinf/node-bcc/blob/master/LICENSE.md) [![npm](https://img.shields.io/npm/v/node-bcc.svg?style=flat-square)](https://www.npmjs.com/package/node-bcc) [![npm](https://img.shields.io/npm/dm/node-bcc.svg?style=flat-square)](https://www.npmjs.com/package/node-bcc)
+![Maintenance](https://img.shields.io/maintenance/yes/2018.svg?style=flat-square) [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![license](https://img.shields.io/github/license/beyerleinf/node-bcc.svg?style=flat-square)](https://github.com/beyerleinf/node-bcc/blob/master/LICENSE.md) [![npm](https://img.shields.io/npm/v/node-bcc.svg?style=flat-square)](https://www.npmjs.com/package/node-bcc) [![npm](https://img.shields.io/npm/dm/node-bcc.svg?style=flat-square)](https://www.npmjs.com/package/node-bcc)
 
 [![Travis](https://img.shields.io/travis/beyerleinf/node-bcc.svg?style=flat-square)](https://travis-ci.org/beyerleinf/node-bcc) [![Codecov](https://img.shields.io/codecov/c/github/beyerleinf/node-bcc.svg?style=flat-square)](https://codecov.io/gh/beyerleinf/node-bcc) [![David](https://img.shields.io/david/beyerleinf/node-bcc.svg?style=flat-square)](https://github.com/beyerleinf/node-bcc) [![David](https://img.shields.io/david/dev/beyerleinf/node-bcc.svg?style=flat-square)](![David](https://img.shields.io/david/beyerleinf/node-bcc.svg?style=flat-square)) [![Known Vulnerabilities](https://snyk.io/test/github/beyerleinf/node-bcc/badge.svg?style=flat-square)](https://snyk.io/test/github/beyerleinf/node-bcc)
 
@@ -11,7 +11,6 @@ This library provides its own TypeScript type definitions.
 
 ## Things to come
 
-* Make `Bcc` and `Hex` static
 * Move `Bcc` and `Hex` to `/bcc` and `/hex` respectively
 * CLI application
 * 0x-prepended strings
@@ -36,7 +35,7 @@ For the full (generated) documentation go to [the Documentation](https://node-bc
 ``` typescript
 import {Bcc} from 'node-bcc';
 
-console.log(new Bcc().calculate(['A4', '37', 'F6', 'F8', 'CD']));
+console.log(Bcc.calculate(['A4', '37', 'F6', 'F8', 'CD']));
 // 80
 ```
 
@@ -45,7 +44,7 @@ console.log(new Bcc().calculate(['A4', '37', 'F6', 'F8', 'CD']));
 ``` javascript
 const Bcc = require('node-bcc').Bcc;
 
-console.log(new Bcc().calculate(['A4', '37', 'F6', 'F8', 'CD']));
+console.log(Bcc.calculate(['A4', '37', 'F6', 'F8', 'CD']));
 // 80
 ```
 
@@ -58,7 +57,7 @@ console.log(new Bcc().calculate(['A4', '37', 'F6', 'F8', 'CD']));
 ``` typescript
 import {Hex} from 'node-bcc'
 
-console.log(new Hex().split('AABBCC'));
+console.log(Hex.split('AABBCC'));
 // [AA,BB,CC]
 ```
 
@@ -67,7 +66,7 @@ console.log(new Hex().split('AABBCC'));
 ``` javascript
 const Hex = require('node-bcc').Hex;
 
-console.log(new Hex().split('AABBCC'));
+console.log(Hex.split('AABBCC'));
 // [AA,BB,CC]
 ```
 
