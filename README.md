@@ -11,7 +11,6 @@ This library provides its own TypeScript type definitions.
 
 ## Things to come
 
-* Move `Bcc` and `Hex` to `/bcc` and `/hex` respectively
 * CLI application
 * 0x-prepended strings
 * Add more and better examples
@@ -33,7 +32,7 @@ For the full (generated) documentation go to [the Documentation](https://node-bc
 #### TypeScript
 
 ``` typescript
-import {Bcc} from 'node-bcc';
+import {Bcc} from 'node-bcc/bcc';
 
 console.log(Bcc.calculate(['A4', '37', 'F6', 'F8', 'CD']));
 // 80
@@ -42,7 +41,7 @@ console.log(Bcc.calculate(['A4', '37', 'F6', 'F8', 'CD']));
 #### JavaScript
 
 ``` javascript
-const Bcc = require('node-bcc').Bcc;
+const Bcc = require('node-bcc/bcc').Bcc;
 
 console.log(Bcc.calculate(['A4', '37', 'F6', 'F8', 'CD']));
 // 80
@@ -55,7 +54,7 @@ console.log(Bcc.calculate(['A4', '37', 'F6', 'F8', 'CD']));
 ##### TypeScript
 
 ``` typescript
-import {Hex} from 'node-bcc'
+import {Hex} from 'node-bcc/hex'
 
 console.log(Hex.split('AABBCC'));
 // [AA,BB,CC]
@@ -64,7 +63,7 @@ console.log(Hex.split('AABBCC'));
 ##### JavaScript
 
 ``` javascript
-const Hex = require('node-bcc').Hex;
+const Hex = require('node-bcc/hex').Hex;
 
 console.log(Hex.split('AABBCC'));
 // [AA,BB,CC]

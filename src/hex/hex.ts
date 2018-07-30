@@ -1,4 +1,4 @@
-import {Helper} from './helper/helper';
+import {Helper} from '../helper';
 
 /**
  * This class provides methods for handling hex strings.

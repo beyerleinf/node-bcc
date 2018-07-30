@@ -1,4 +1,4 @@
-import {Helper} from './helper';
+import {Helper} from '../helper';
 
 /**
  * This class provides methods for calculating the Block Check Character of a message.
@@ -20,7 +20,7 @@ export class Bcc {
    * `4`
    *
    * @static
-   * @param {string[]|number[]} message The bytes of the message as a hex string or as a number array representing the bytes as decimal numbers.
+   * @param {string[]} message The bytes of the message as a hex string arrayrepresenting the bytes as decimal numbers.
    * @returns {number}
    */
   static calculate(message: string[]): number;
@@ -38,7 +38,7 @@ export class Bcc {
    * `4`
    *
    * @static
-   * @param {string[]|number[]} message The bytes of the message as a hex string or as a number array representing the bytes as decimal numbers.
+   * @param {number[]} message The bytes of the message as a number array representing the bytes as decimal numbers.
    * @returns {number}
    */
   static calculate(message: number[]): number;
@@ -59,7 +59,7 @@ export class Bcc {
    * `4`
    *
    * @static
-   * @param {string[]|number[]} message The bytes of the message as a hex string or as a number array representing the bytes as decimal numbers.
+   * @param {string[]|number[]} message The bytes of the message as a hex string array or as a number array representing the bytes as decimal numbers.
    * @returns {number}
    */
   static calculate(message: string[]|number[]): number {

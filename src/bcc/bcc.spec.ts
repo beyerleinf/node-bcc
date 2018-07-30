@@ -1,9 +1,10 @@
 import {expect} from 'chai';
 import * as sinon from 'sinon';
 
+import {Helper} from '../helper';
+import {Hex} from '../hex';
+
 import {Bcc} from './bcc';
-import {Helper} from './helper';
-import {Hex} from './hex';
 
 describe('Bcc', () => {
   describe('calculate', () => {
