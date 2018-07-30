@@ -32,7 +32,7 @@ For the full (generated) documentation go to [the Documentation](https://node-bc
 #### TypeScript
 
 ``` typescript
-import {Bcc} from 'node-bcc/bcc';
+import {Bcc} from 'node-bcc';
 
 console.log(Bcc.calculate(['A4', '37', 'F6', 'F8', 'CD']));
 // 80
@@ -41,7 +41,7 @@ console.log(Bcc.calculate(['A4', '37', 'F6', 'F8', 'CD']));
 #### JavaScript
 
 ``` javascript
-const Bcc = require('node-bcc/bcc').Bcc;
+const Bcc = require('node-bcc').Bcc;
 
 console.log(Bcc.calculate(['A4', '37', 'F6', 'F8', 'CD']));
 // 80
@@ -54,7 +54,7 @@ console.log(Bcc.calculate(['A4', '37', 'F6', 'F8', 'CD']));
 ##### TypeScript
 
 ``` typescript
-import {Hex} from 'node-bcc/hex'
+import {Hex} from 'node-bcc'
 
 console.log(Hex.split('AABBCC'));
 // [AA,BB,CC]
@@ -63,7 +63,7 @@ console.log(Hex.split('AABBCC'));
 ##### JavaScript
 
 ``` javascript
-const Hex = require('node-bcc/hex').Hex;
+const Hex = require('node-bcc').Hex;
 
 console.log(Hex.split('AABBCC'));
 // [AA,BB,CC]
@@ -74,7 +74,7 @@ console.log(Hex.split('AABBCC'));
 ##### TypeScript
 
 ``` typescript
-import {Ascii} from 'node-bcc/ascii'
+import {Ascii} from 'node-bcc'
 
 console.log(Ascii.asciiToByteArray('AABBCC'));
 // [65, 66, 67]
@@ -83,7 +83,7 @@ console.log(Ascii.asciiToByteArray('AABBCC'));
 ##### JavaScript
 
 ``` javascript
-const Ascii = require('node-bcc/ascii').Ascii;
+const Ascii = require('node-bcc').Ascii;
 
 console.log(Ascii.asciiToByteArray('AABBCC'));
 // [65, 66, 67]
