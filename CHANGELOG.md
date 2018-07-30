@@ -3,9 +3,12 @@
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
 <a name="2.0.0"></a>
-# [2.0.0](https://github.com/beyerleinf/node-bcc/compare/v1.2.1...v2.0.0) (2018-07-30)
+# [2.0.0](https://github.com/beyerleinf/node-bcc/compare/v1.2.0...v2.0.0) (2018-07-30)
 
+### BREAKING CHANGES
 
+* Made Bcc and Hex methods static
+* Moved Hex and Bcc to subdirectories
 
 <a name="1.2.0"></a>
 # [1.2.0](https://github.com/beyerleinf/node-bcc/compare/v1.1.1...v1.2.0) (2018-07-26)
