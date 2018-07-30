@@ -7,8 +7,8 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### BREAKING CHANGES
 
-* Made Bcc and Hex methods static
-* Moved Hex and Bcc to subdirectories
+* Made Bcc and Hex methods static ([a53eb96](https://github.com/beyerleinf/node-bcc/commit/a53eb96))
+* Moved Hex and Bcc to subdirectories ([dab62f3](https://github.com/beyerleinf/node-bcc/commit/dab62f3))
 
 <a name="1.2.0"></a>
 # [1.2.0](https://github.com/beyerleinf/node-bcc/compare/v1.1.1...v1.2.0) (2018-07-26)
