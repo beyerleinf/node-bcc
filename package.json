@@ -44,7 +44,7 @@
     "standard-version": "^4.4.0",
     "ts-node": "^7.0.0",
     "tslint": "^5.10.0",
-    "typedoc": "^0.12.0",
+    "typedoc": "^0.13.0",
     "typescript": "^2.9.2"
   },
   "nyc": {
