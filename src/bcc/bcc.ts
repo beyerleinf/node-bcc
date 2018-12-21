@@ -66,7 +66,7 @@ export class Bcc {
    * @returns {number}
    */
   static calculate(message: string[]|number[]): number {
-    let bcc: number = 0x00;
+    let bcc = 0x00;
 
     if (!Helper.checkArray(message)) {
       return -1;
@@ -74,6 +74,7 @@ export class Bcc {
 
     for (const byte of message) {
       if (typeof byte === 'string') {
+        /* tslint:disable-next-line ban */
         bcc ^= parseInt(byte, 16);
       } else {
         bcc ^= byte;

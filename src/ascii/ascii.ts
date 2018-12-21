@@ -33,7 +33,7 @@ export class Ascii {
    * @memberof Ascii
    */
   static validate(input: string): boolean {
-    let result: boolean = true;
+    let result = true;
 
     for (const char of input) {
       if (char.charCodeAt(0) > 127) {

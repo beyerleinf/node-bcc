@@ -43,4 +43,4 @@ describe('Helper', () => {
       expect(Helper.checkString('ABC')).to.be.true;
     });
   });
-})
+});
