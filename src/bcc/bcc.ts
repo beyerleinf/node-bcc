@@ -1,14 +1,16 @@
 import {Helper} from '../helper';
 
 /**
- * This class provides methods for calculating the Block Check Character of a message.
+ * This class provides methods for calculating the Block Check Character of a
+ * message.
  *
  * @export
  * @class Bcc
  */
 export class Bcc {
   /**
-   * This function calculates a Block Check Character for the given array of `hex` strings.
+   * This function calculates a Block Check Character for the given array of
+   * strings.
    *
    * ### Example
    *
@@ -20,13 +22,14 @@ export class Bcc {
    * `4`
    *
    * @static
-   * @param {string[]} message The bytes of the message as a hex string arrayrepresenting the bytes as decimal numbers.
+   * @param {string[]} message The bytes of the message as a hex string array.
    * @returns {number}
    */
   static calculate(message: string[]): number;
 
   /**
-   * This function calculates a Block Check Character for the given array of numbers.
+   * This function calculates a Block Check Character for the given array of
+   * numbers.
    *
    * ### Example
    *
@@ -38,13 +41,13 @@ export class Bcc {
    * `4`
    *
    * @static
-   * @param {number[]} message The bytes of the message as a number array representing the bytes as decimal numbers.
+   * @param {number[]} message The bytes of the message as a number array.
    * @returns {number}
    */
   static calculate(message: number[]): number;
 
   /**
-   * This function calculates a Block Check Character for the given array of `hex` strings.
+   * This function calculates a Block Check Character for the given array.
    *
    * ### Example
    *
@@ -59,7 +62,7 @@ export class Bcc {
    * `4`
    *
    * @static
-   * @param {string[]|number[]} message The bytes of the message as a hex string array or as a number array representing the bytes as decimal numbers.
+   * @param {string[]|number[]} message The bytes of the message as a hex string array or as a number array.
    * @returns {number}
    */
   static calculate(message: string[]|number[]): number {

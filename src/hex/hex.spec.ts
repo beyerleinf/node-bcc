@@ -18,7 +18,9 @@ describe('Hex', () => {
     });
 
     it('should return correctly split array', () => {
-      expect(Hex.split('AABBCCDDEEFF')).to.deep.equal(['AA', 'BB', 'CC', 'DD', 'EE', 'FF']);
+      expect(Hex.split('AABBCCDDEEFF')).to.deep.equal([
+        'AA', 'BB', 'CC', 'DD', 'EE', 'FF'
+      ]);
     });
   });
 
@@ -61,18 +63,21 @@ describe('Hex', () => {
       expect(Hex.toHexString(arr)).to.be.null;
     });
 
-    it('should return string prepended with 0 if input value is 15 or lower', () => {
-      for (let i = 0; i < 16; i++) {
-        expect(Hex.toHexString([i])).to.deep.equal(`0${i.toString(16)}`);
-      }
-    });
+    it('should return string prepended with 0 if input value is 15 or lower',
+       () => {
+         for (let i = 0; i < 16; i++) {
+           expect(Hex.toHexString([i])).to.deep.equal(`0${i.toString(16)}`);
+         }
+       });
 
     it('should return return valid hex string', () => {
       expect(Hex.toHexString([1, 15, 58, 96, 34])).to.deep.equal('010f3a6022');
     });
 
-    it('should return the string in upopercase of the uppercase flag was set', () => {
-      expect(Hex.toHexString([1, 15, 58, 96, 34], true)).to.deep.equal('010F3A6022');
-    });
+    it('should return the string in upopercase of the uppercase flag was set',
+       () => {
+         expect(Hex.toHexString([1, 15, 58, 96, 34], true))
+             .to.deep.equal('010F3A6022');
+       });
   });
 });

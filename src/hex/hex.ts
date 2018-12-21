@@ -10,8 +10,8 @@ export class Hex {
   /**
    * Splits the given hexadecimal string.
    *
-   * The input string should not contain spaces and the individual bytes should not be prepended by
-   * '0x'.
+   * The input string should not contain spaces and the individual bytes should
+   * not be prepended by '0x'.
    *
    * ## Example
    * **Input:**

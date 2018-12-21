@@ -1,8 +1,9 @@
 export class Ascii {
   /**
-   * Converts the given `input` into a array of numbers representing the characters as their decimal
-   * value. When a character that is not within the ASCII spec is encountered, a SUB (`0x1A`hex /
-   * `26`dec) is inserted. We recommend using {@link Ascii.validate} to validate te input first.
+   * Converts the given `input` into an array of numbers representing the
+   * characters as their decimal value. When a character that is not within the
+   * ASCII spec is encountered, a SUB (`0x1A`hex / `26`dec) is inserted. We
+   * recommend using {@link Ascii.validate} to validate the input first.
    *
    * @param {string} input
    * @returns {number[]} An array that contains the character codes.
