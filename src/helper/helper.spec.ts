@@ -1,3 +1,4 @@
+/* tslint:disable no-any */
 import {expect} from 'chai';
 
 import {Helper} from './helper';

@@ -2,5 +2,5 @@
   "extends": [
     "gts/tslint.json",
     "tslint-no-unused-expression-chai"
-  ],
+  ]
 }

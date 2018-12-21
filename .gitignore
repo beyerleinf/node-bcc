@@ -61,7 +61,7 @@ typings/
 .next
 
 # Build output
-dist
+build
 
 # Generated docs
 docs

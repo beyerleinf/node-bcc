@@ -1,3 +1,5 @@
+/* tslint:disable no-any */
+
 import {expect} from 'chai';
 import * as sinon from 'sinon';
 
