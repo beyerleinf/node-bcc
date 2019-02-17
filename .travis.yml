@@ -24,6 +24,7 @@ script:
 after_script: greenkeeper-lockfile-upload
 after_success:
 - npm run codecov
+- sh ./clear-remote.sh
 - ncftpput -R -v -u $FTP_USER -p $FTP_PASS beyerleinf.de docs ./*
 env:
   global:
