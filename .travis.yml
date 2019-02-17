@@ -12,6 +12,7 @@ node_js:
 - '7'
 - '9'
 - '10'
+- '11'
 before_install:
 - "[[ $(node -v) =~ ^v9.*$ ]] || npm install -g npm@latest"
 - npm set progress false
