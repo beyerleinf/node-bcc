@@ -13,8 +13,7 @@ node_js:
 - '9'
 - '10'
 before_install:
-# package-lock.json was introduced in npm@5
-- '[[ $(node -v) =~ ^v9.*$ ]] || npm install -g npm@latest' # skipped when using node 9
+- "[[ $(node -v) =~ ^v9.*$ ]] || npm install -g npm@latest"
 - npm set progress false
 - npm install -g greenkeeper-lockfile@1
 install:
@@ -25,6 +24,8 @@ script:
 after_script: greenkeeper-lockfile-upload
 after_success:
 - npm run codecov
+- ncftpput -R -v -u $FTP_USER -p $FTP_PASS beyerleinf.de docs ./*
 env:
   global:
-    secure: DVQ7zMeJeRKhIiOq8SmG2hPdUBRiDXK2GuLf2H7BFQj6zeXPjeHxP+kVs5g8fgKRv7+J42J232CichBrU2iQYgW2B3fnTLTpuoaNcVb0xSGQnDbNxcnSNJjEqBjJIwlRFjTTjbeTP8HHaizNt9C3fCvJNPI95pe5S7weZB/kdJmY2aG5mA8+S8a94izbjlg21Sf+iYgFjmnzz3XNCS4xHWYImoIiteEG3XKMIEOMLMiV1YXrxUgRf9HpHrbe7Qvfj9H6RPCKCUcONGtbYY6FdYvIPrV7l5xaw6kvgaUFOAW/HGW2xAacFMruyANtiiKLuKdLW/PNs98LhlI10tPn2Q3JUX3/djTkmMsE9uQ82YGvNRkZ4Qi5kotNZ5Oeu+hk5WInOJH/Ie4NuWW6cWbFKgYuifxrk444qz8pNyqFg97KMu9LCXSGHbVyqcRfvlj26GoQzd2JgTVaQ89Zx/SY6IVqro25nciSZv6W8kv3NpyMAsKvT1/b41lnPhuhuswpF1TTqiUoFsSaHvVQn+5BAuFYLrAgxVmS0aIqItgoQAaqdxSCEpj8u0yDl/AZi8PIzX083b2TBcpE5VthXpZuACn1na3JnGzgAyBzDnpY0duXYVcmyW1AHPwtXWC/KkrV1XT6NEqz5w2I4aaUbsVistwLzGJELhKCFVbZSRq+klQ=
+  - secure: bDdvo+0MPPmzEv+tcQkZuXHMlp3GPtESlpSuVtZQ2WcMVltyOPOBq9GRadoWynMpY3+K/Sr7Xg1I/X5j5IUSerMiACV6FEXsBALmMm4D5gs5zLs7nCAH3vBXrvbaMWyCTi4zgofB41LfD+Kozvh/fMGaE5EmpfWP0qYzAo/ctskZBQ2m4Ip93gMhh8JECSj7ff5f6VxGoZZaG7psQhNqAiCstmQUpua8RM5l0DqsE6PkDyciFd/em7YDeq6NEukNXQy+TMSzprbnP3DM/nc5AtNN3ZFI1RsU0X/ZwQcYoEfD6KIGMBFPnKq953peZAaGJfBkHJOCO2Dh4xqFhWTXOQv0lsKLxMtfnoDgLwjj7TbV1yP5ZWONDExvuL/D4NjhdpP8vnIG+JKqE7VSq+Fkpjw7GEXNSzfdrMvtwbFvUWrEGIMD8Ea60QyNa9QvLsGhVtrXDmhiz0P0Tb79zRrE7vCYMy+ufnDQQkD5MkHgDYfaawUL6lCsCxnyUTRw6d/2QD5Ws1XSescKD/JhUgSrc8dC0D6la6fhi/Z+QLT7sBJGk7siZEQKZYaCwNZgLkGDjnbFz8EE7tPnVxyuc9nl+vl/i6LCXePGJMlHSQjzATOY+g9LeAl9hHL2simLNq0EM07NDH/UAw5FH+kPWSnPyu6/30lkuAt73LJrLBl7Cp0=
+  - secure: K/nODUD22PIHP8VVURgo2hlOCC9GdlHKMflMStwGiRGQ+JhQhow6uJk7QLX9y72rSs+FEMYoRuyN1X7496Y43iFaC+trki1726BNmIZ42x2/brvZ8ynYFc1hRUrpjfDcSW9gT6lTw9Sod7+IvlnWj0jk30gJPc9lhiFm8bBuz5dsQbsGkWxKKM6g5v15D9Tc8co4ulIKpS4VrLuZiysV+ZwO9P9qbYBH9za6gmrSrEvLxxUBj8MDQF7zxWigMJuaOM3FmXtlXofvD760f/0hOK/u3gFCwcEd3vridmftMLi7BDj4B1t22jd9Rp0L13OeTtJIsLDg4z0MOHLLp4Gq2KDAZ8CfzRzS5yJmSsJXZFOEA4w0GEGdChJQAv8nU8OGSHYCJ8+RhZGNWfYHxnkFQHf1mccpFU9tg/lpiRAdMusYtT4YX8Ogg3VSlxwK8wPE5nVk8UnAEQ+B/xc1D0V3zKELwUcbml+tAHMV0t/XrlUJ3l35cOji/uY9T0uj6bCEiBr2en4EWr8JnzhUtXAEzsqR0nKJox9Nc/AqI7mZEdKcNDFyh6MOGusTZ0wcYxxJCGiXpgBV6Vlbr6oC49Pr9aE5ejr7E2ikwQmk11cJw/ODw3FJEetsk8AT6eENRmyFXzsiDaY7GS+MPlgubiYS4hF4yczCMxvQjKBiM/YvG3E=
