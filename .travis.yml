@@ -25,8 +25,7 @@ after_script: greenkeeper-lockfile-upload
 after_success:
 - npm run codecov
 - npm run doc
-- sh ./clear-remote.sh
-- ncftpput -R -v -u $FTP_USER -p $FTP_PASS beyerleinf.de docs 
+- ncftpput -R -v -u $FTP_USER -p $FTP_PASS beyerleinf.de docs ./docs
 env:
   global:
   - secure: bDdvo+0MPPmzEv+tcQkZuXHMlp3GPtESlpSuVtZQ2WcMVltyOPOBq9GRadoWynMpY3+K/Sr7Xg1I/X5j5IUSerMiACV6FEXsBALmMm4D5gs5zLs7nCAH3vBXrvbaMWyCTi4zgofB41LfD+Kozvh/fMGaE5EmpfWP0qYzAo/ctskZBQ2m4Ip93gMhh8JECSj7ff5f6VxGoZZaG7psQhNqAiCstmQUpua8RM5l0DqsE6PkDyciFd/em7YDeq6NEukNXQy+TMSzprbnP3DM/nc5AtNN3ZFI1RsU0X/ZwQcYoEfD6KIGMBFPnKq953peZAaGJfBkHJOCO2Dh4xqFhWTXOQv0lsKLxMtfnoDgLwjj7TbV1yP5ZWONDExvuL/D4NjhdpP8vnIG+JKqE7VSq+Fkpjw7GEXNSzfdrMvtwbFvUWrEGIMD8Ea60QyNa9QvLsGhVtrXDmhiz0P0Tb79zRrE7vCYMy+ufnDQQkD5MkHgDYfaawUL6lCsCxnyUTRw6d/2QD5Ws1XSescKD/JhUgSrc8dC0D6la6fhi/Z+QLT7sBJGk7siZEQKZYaCwNZgLkGDjnbFz8EE7tPnVxyuc9nl+vl/i6LCXePGJMlHSQjzATOY+g9LeAl9hHL2simLNq0EM07NDH/UAw5FH+kPWSnPyu6/30lkuAt73LJrLBl7Cp0=
