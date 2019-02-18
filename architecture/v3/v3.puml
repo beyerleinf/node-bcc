@@ -1,0 +1,28 @@
+@startuml node-bcc@v3
+
+package node-bcc {
+  class Bcc {
+    + {static} calculate(number[]|Buffer): Promise<number>
+    + {static} calculateSync(number[]|Buffer): number
+  }
+
+  ' package stream {
+  '   class BccStream
+  ' }
+
+  package util {
+    class Ascii {
+      + {static} asciiToByteArray(input: string): Promise<number[]>
+      + {static} asciiToByteArraySync(input: string): number[]
+      + {static} validate(input: string): boolean
+    }
+
+    class Hex {
+      + {static} hexStringToByteArray(input: string): Promise<number[]>
+      + {static} hexStringToByteArraySync(input: string): number[]
+      + {static} validate(input: string, delimiter?: string, prefix?: string, suffix?: string): boolean
+    }
+  }
+}
+
+@enduml
