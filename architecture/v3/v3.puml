@@ -1,9 +1,9 @@
 @startuml node-bcc@v3
 
 package node-bcc {
-  class Bcc {
-    + {static} calculate(number[]|Buffer): Promise<number>
-    + {static} calculateSync(number[]|Buffer): number
+  class BCC {
+    + {static} calculate(input: number[]|Buffer): Promise<number>
+    + {static} calculateSync(input: number[]|Buffer): number
   }
 
   ' package stream {
@@ -11,7 +11,7 @@ package node-bcc {
   ' }
 
   package util {
-    class Ascii {
+    class ASCII {
       + {static} asciiToByteArray(input: string): Promise<number[]>
       + {static} asciiToByteArraySync(input: string): number[]
       + {static} validate(input: string): boolean
