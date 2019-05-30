@@ -30,7 +30,7 @@
     "bcc"
   ],
   "author": "Fabian Beyerlein",
-  "license": "AGPL-3.0",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/beyerleinf/node-bcc/issues"
   },
