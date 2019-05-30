@@ -2,32 +2,31 @@ sudo: required
 addons:
   apt:
     packages:
-    - ncftp
+      - ncftp
 os:
-- linux
+  - linux
 language: node_js
 node_js:
-- '8'
-- '6'
-- '7'
-- '9'
-- '10'
-- '11'
+  - '7'
+  - '8'
+  - '9'
+  - '10'
+  - '11'
 before_install:
-- "[[ $(node -v) =~ ^v9.*$ ]] || npm install -g npm@latest"
-- npm set progress false
-- npm install -g greenkeeper-lockfile@1
+  - '[[ $(node -v) =~ ^v9.*$ ]] || npm install -g npm@latest'
+  - npm set progress false
+  - npm install -g greenkeeper-lockfile@1
 install:
-- npm install
+  - npm install
 before_script: greenkeeper-lockfile-update
 script:
-- npm test
+  - npm test
 after_script: greenkeeper-lockfile-upload
 after_success:
-- npm run codecov
-- npm run doc
-- ncftpput -R -v -u $FTP_USER -p $FTP_PASS beyerleinf.de docs docs/*
+  - npm run codecov
+  - npm run doc
+  - ncftpput -R -v -u $FTP_USER -p $FTP_PASS beyerleinf.de docs docs/*
 env:
   global:
-  - secure: fvaQ7Pgu53uXaHt1W63uOq8HUpbvv/g59J3ixDy+pIR1WTBmQya91nVFqjyDnZcBcv+1jaXpVhk60c1zAK+f4HlRUdmD+4JblJKdN+IMJxyIi3Qb5/Bnrb5AhZ6BYhTeS0v/Mbfpke9trT+XC4OwzZpJUDQqOrujviaunkJOTX+cOsTJJc/03OkwNGot5QTLjoGpQPrhglxKQDmkHOdhrH52+8oasjfWgxAHSgQL711ZXxokf9EfgtC6IoNOmJd1XpULmJAtg99mOguxvXr1EThFanaSEZ2pPC7Cibscr3O4kEKeIhqwBV6Q5gyrr03JpA/X8gMqW7zinXBwfwXW2DMovbXy5TP3zOU3GhFo08S6fqEnsdFZHFFMVPAi8bIBvgBxdOvYz+hgJfUFqfsLdgtJw5dY/tB5gC6dH+5Xe7+ilmDqmWupJyCStc9UoPX55y9bnTdMSk/elyywbNcgh+dLVNMTn6euh9zXTuFvIzJ5wx1K7Bq3HCsn8oBGEpU8L8B4FL6MOotDPjZC8RlajlSXh3U1e8jzKLRviiNkiCbm3nzQMg6fBowDX7F5nzwmcATkzdZl+4VDdm1RGvYlY13RUP8VN+QqeShZBMWpMk+w0iNaUvBTn7UX0fmJGqpGNd4pkK3jZ6kOmE1GiypScIn4v0QRNS8mj5dd1KO7Ayg=
-  - secure: XZLNz08+6PgcMiXqM3gP9zcainGGK2FIMfklQ5DS5Q0B6P79Vt3gyEXZZF+41ohWBa6lOCC+ttOe+6WIzBKRQRO8wgHXzzs7JbIpFE27v51la1Z67i58dpvbKkPO/d4pgLuSo9TsdyebCZWMarEHstbO1+Wvqwdo+4PMzqnE6Bu8ejbnVDWqysXn5XOsMu3jbnmt+Pl+BOU0av5AG3rn7QtS0gua8z3e0clk6qfgdsUDmW4wkSsTh8O5S0Q2QXxWCqyo5HKlX4UPSs9kTjosUxXyYRtfFDW3bsqyKmK3rdpb9aSxSrPys9VTE+ERvC5vvntpPlRA0e6YBw8iM+8gsSONW8cDBb9YsloLKrj3LcS2tKbz0wc5wn3m7+ySkGL/20UBCJdyp8dyQ8PxvpYgWT4PrX6mmqWBoFmHXd8QIRcngSIMYapjvbhDWLYEOYTebpDHeKhTfU9I6F55UKZT9TzN6zcGpmQpGlygKJISK12QNbjZKQf0KoBpcPnJ34iAFVQiPS2riLCl+LrTmZLVUopDFvQx52UoJNrbMnsOb+M/9jR1tJbnFh4mVoJIk77928DoT6yp3eH6VrMJit2YBGnnz9WKlBC2yqq857Km0WncoYSXGVLCjb18gb7dtGLSHMEkSl4ow37A/h5yxLOcc4vmaqfOpG/WzTGXLZLZG8U=
+    - secure: fvaQ7Pgu53uXaHt1W63uOq8HUpbvv/g59J3ixDy+pIR1WTBmQya91nVFqjyDnZcBcv+1jaXpVhk60c1zAK+f4HlRUdmD+4JblJKdN+IMJxyIi3Qb5/Bnrb5AhZ6BYhTeS0v/Mbfpke9trT+XC4OwzZpJUDQqOrujviaunkJOTX+cOsTJJc/03OkwNGot5QTLjoGpQPrhglxKQDmkHOdhrH52+8oasjfWgxAHSgQL711ZXxokf9EfgtC6IoNOmJd1XpULmJAtg99mOguxvXr1EThFanaSEZ2pPC7Cibscr3O4kEKeIhqwBV6Q5gyrr03JpA/X8gMqW7zinXBwfwXW2DMovbXy5TP3zOU3GhFo08S6fqEnsdFZHFFMVPAi8bIBvgBxdOvYz+hgJfUFqfsLdgtJw5dY/tB5gC6dH+5Xe7+ilmDqmWupJyCStc9UoPX55y9bnTdMSk/elyywbNcgh+dLVNMTn6euh9zXTuFvIzJ5wx1K7Bq3HCsn8oBGEpU8L8B4FL6MOotDPjZC8RlajlSXh3U1e8jzKLRviiNkiCbm3nzQMg6fBowDX7F5nzwmcATkzdZl+4VDdm1RGvYlY13RUP8VN+QqeShZBMWpMk+w0iNaUvBTn7UX0fmJGqpGNd4pkK3jZ6kOmE1GiypScIn4v0QRNS8mj5dd1KO7Ayg=
+    - secure: XZLNz08+6PgcMiXqM3gP9zcainGGK2FIMfklQ5DS5Q0B6P79Vt3gyEXZZF+41ohWBa6lOCC+ttOe+6WIzBKRQRO8wgHXzzs7JbIpFE27v51la1Z67i58dpvbKkPO/d4pgLuSo9TsdyebCZWMarEHstbO1+Wvqwdo+4PMzqnE6Bu8ejbnVDWqysXn5XOsMu3jbnmt+Pl+BOU0av5AG3rn7QtS0gua8z3e0clk6qfgdsUDmW4wkSsTh8O5S0Q2QXxWCqyo5HKlX4UPSs9kTjosUxXyYRtfFDW3bsqyKmK3rdpb9aSxSrPys9VTE+ERvC5vvntpPlRA0e6YBw8iM+8gsSONW8cDBb9YsloLKrj3LcS2tKbz0wc5wn3m7+ySkGL/20UBCJdyp8dyQ8PxvpYgWT4PrX6mmqWBoFmHXd8QIRcngSIMYapjvbhDWLYEOYTebpDHeKhTfU9I6F55UKZT9TzN6zcGpmQpGlygKJISK12QNbjZKQf0KoBpcPnJ34iAFVQiPS2riLCl+LrTmZLVUopDFvQx52UoJNrbMnsOb+M/9jR1tJbnFh4mVoJIk77928DoT6yp3eH6VrMJit2YBGnnz9WKlBC2yqq857Km0WncoYSXGVLCjb18gb7dtGLSHMEkSl4ow37A/h5yxLOcc4vmaqfOpG/WzTGXLZLZG8U=
