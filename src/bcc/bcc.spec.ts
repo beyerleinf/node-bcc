@@ -1,12 +1,12 @@
 /* tslint:disable no-any */
 
-import {expect} from 'chai';
+import { expect } from 'chai';
 import * as sinon from 'sinon';
 
-import {Helper} from '../helper';
-import {Hex} from '../hex';
+import { Helper } from '../helper';
+import { Hex } from '../hex';
 
-import {Bcc} from './bcc';
+import { Bcc } from './bcc';
 
 describe('Bcc', () => {
   describe('calculate', () => {

@@ -1,4 +1,4 @@
-import {Helper} from '../helper';
+import { Helper } from '../helper';
 
 /**
  * This class provides methods for calculating the Block Check Character of a
@@ -65,7 +65,7 @@ export class Bcc {
    * @param {string[]|number[]} message The bytes of the message as a hex string array or as a number array.
    * @returns {number}
    */
-  static calculate(message: string[]|number[]): number {
+  static calculate(message: string[] | number[]): number {
     let bcc = 0x00;
 
     if (!Helper.checkArray(message)) {

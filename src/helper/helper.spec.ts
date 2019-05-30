@@ -1,7 +1,7 @@
 /* tslint:disable no-any */
-import {expect} from 'chai';
+import { expect } from 'chai';
 
-import {Helper} from './helper';
+import { Helper } from './helper';
 
 describe('Helper', () => {
   describe('checkArray', () => {

@@ -1,11 +1,13 @@
-import {expect} from 'chai';
+import { expect } from 'chai';
 import * as sinon from 'sinon';
 
-import {Ascii} from './ascii';
+import { Ascii } from './ascii';
+
+/* tslint:disable no-any */
 
 describe('Ascii', () => {
   describe('asciiToByteArray', () => {
-    let validateStub: sinon.SinonStub;
+    let validateStub: any;
 
     beforeEach(() => {
       validateStub = sinon.stub(Ascii, 'validate');
@@ -23,7 +25,7 @@ describe('Ascii', () => {
 
     it('should replace non-ASCII chars with SUB character', () => {
       validateStub.returns(false);
-      expect(Ascii.asciiToByteArray('ABC')).to.deep.equal([0x1A, 0x1A, 0x1A]);
+      expect(Ascii.asciiToByteArray('ABC')).to.deep.equal([0x1a, 0x1a, 0x1a]);
     });
   });
 

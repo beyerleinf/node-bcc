@@ -14,7 +14,7 @@ export class Ascii {
 
     for (const char of input) {
       if (!this.validate(char)) {
-        array.push(0x1A);
+        array.push(0x1a);
         continue;
       }
 

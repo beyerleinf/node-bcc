@@ -1,4 +1,4 @@
-import {Helper} from '../helper';
+import { Helper } from '../helper';
 
 /**
  * This class provides methods for handling hex strings.
@@ -29,7 +29,7 @@ export class Hex {
    * @returns {string[]|null}
    * @memberof Hex
    */
-  static split(hex: string): string[]|null {
+  static split(hex: string): string[] | null {
     const chunks: string[] = [];
 
     if (!Helper.checkString(hex)) {
@@ -70,7 +70,7 @@ export class Hex {
    * @returns {string|null} The given array of numbers as a hexadecimal string.
    * @memberof Hex
    */
-  static toHexString(array: number[], uppercase?: boolean): string|null {
+  static toHexString(array: number[], uppercase?: boolean): string | null {
     let result = '';
 
     if (!Helper.checkArray(array)) {
