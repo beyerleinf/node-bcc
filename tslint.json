@@ -1,6 +1,6 @@
 {
-  "extends": [
-    "gts/tslint.json",
-    "tslint-no-unused-expression-chai"
-  ]
+  "extends": ["gts/tslint.json", "tslint-no-unused-expression-chai"],
+  "linterOptions": {
+    "exclude": ["**/*.json"]
+  }
 }

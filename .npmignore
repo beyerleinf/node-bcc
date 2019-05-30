@@ -1,9 +1,0 @@
-src
-docs
-test
-.clang-format
-typedoc.js
-tsconfig*.json
-tslint.json
-coverage
-.nyc_output
