@@ -2,3 +2,6 @@
 /node_modules
 /coverage
 /.nyc_output
+/docs
+
+.DS_Store
