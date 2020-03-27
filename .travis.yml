@@ -1,4 +1,4 @@
-sudo: required
+# sudo: required
 addons:
   apt:
     packages:
@@ -23,12 +23,12 @@ install:
   - npm install
 jobs:
   include:
-    - script: greenkeeper-lockfile-update
+    # - script: greenkeeper-lockfile-update
     - script: npm test
-    - script: greenkeeper-lockfile-upload
-    - script: npm run codecov
+    # - script: greenkeeper-lockfile-upload
+    # - script: npm run codecov
     - stage: compile
-      script: npm run build
+      script: npm run compile
     - stage: deploy
       script: npm run doc
 
