@@ -1,6 +1,6 @@
-![Maintenance](https://img.shields.io/maintenance/yes/2019.svg?style=flat-square) [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg?style=flat-square)](https://conventionalcommits.org) [![license](https://img.shields.io/github/license/beyerleinf/node-bcc.svg?style=flat-square)](https://github.com/beyerleinf/node-bcc/blob/master/LICENSE.md) [![npm](https://img.shields.io/npm/v/node-bcc.svg?style=flat-square)](https://www.npmjs.com/package/node-bcc) [![npm](https://img.shields.io/npm/dm/node-bcc.svg?style=flat-square)](https://www.npmjs.com/package/node-bcc)
+![Maintenance](https://img.shields.io/maintenance/yes/2020.svg?style=flat-square) [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg?style=flat-square)](https://conventionalcommits.org) [![license](https://img.shields.io/github/license/beyerleinf/node-bcc.svg?style=flat-square)](https://github.com/beyerleinf/node-bcc/blob/master/LICENSE.md) [![npm](https://img.shields.io/npm/v/node-bcc.svg?style=flat-square)](https://www.npmjs.com/package/node-bcc) [![npm](https://img.shields.io/npm/dm/node-bcc.svg?style=flat-square)](https://www.npmjs.com/package/node-bcc)
 
-[![Travis](https://img.shields.io/travis/beyerleinf/node-bcc.svg?style=flat-square)](https://travis-ci.org/beyerleinf/node-bcc) [![Codecov](https://img.shields.io/codecov/c/github/beyerleinf/node-bcc.svg?style=flat-square)](https://codecov.io/gh/beyerleinf/node-bcc) [![David](https://img.shields.io/david/beyerleinf/node-bcc.svg?style=flat-square)](https://github.com/beyerleinf/node-bcc) [![David](https://img.shields.io/david/dev/beyerleinf/node-bcc.svg?style=flat-square)](![David](https://img.shields.io/david/beyerleinf/node-bcc.svg?style=flat-square)) [![Known Vulnerabilities](https://snyk.io/test/github/beyerleinf/node-bcc/badge.svg?style=flat-square)](https://snyk.io/test/github/beyerleinf/node-bcc)
+[![Travis](https://img.shields.io/travis/beyerleinf/node-bcc.svg?style=flat-square)](https://travis-ci.org/beyerleinf/node-bcc) [![Codecov](https://img.shields.io/codecov/c/github/beyerleinf/node-bcc.svg?style=flat-square)](https://codecov.io/gh/beyerleinf/node-bcc) [![David](https://img.shields.io/david/beyerleinf/node-bcc.svg?style=flat-square)](https://github.com/beyerleinf/node-bcc) [![David](https://img.shields.io/david/dev/beyerleinf/node-bcc.svg?style=flat-square)](<![David](https://img.shields.io/david/beyerleinf/node-bcc.svg?style=flat-square)>) [![Known Vulnerabilities](https://snyk.io/test/github/beyerleinf/node-bcc/badge.svg?style=flat-square)](https://snyk.io/test/github/beyerleinf/node-bcc)
 
 [![Issue Stats (long form)](https://img.shields.io/issuestats/i/long/github/beyerleinf/node-bcc.svg?style=flat-square)](https://github.com/beyerleinf/node-bcc/issues) [![GitHub issues](https://img.shields.io/github/issues/beyerleinf/node-bcc.svg?style=flat-square)](https://github.com/beyerleinf/node-bcc/issues) [![GitHub pull requests](https://img.shields.io/github/issues-pr/beyerleinf/node-bcc.svg?style=flat-square)](https://github.com/beyerleinf/node-bcc/pulls) [![Greenkeeper badge](https://badges.greenkeeper.io/beyerleinf/node-bcc.svg?style=flat-square)](https://greenkeeper.io/) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/beyerleinf/node-bcc.svg?style=flat-square)
 
@@ -11,9 +11,9 @@ This library provides its own TypeScript type definitions.
 
 ## Things to come
 
-* CLI application
-* 0x-prepended strings
-* Add more and better examples
+- CLI application
+- 0x-prepended strings
+- Add more and better examples
 
 ## How to use
 
@@ -21,7 +21,7 @@ This library provides its own TypeScript type definitions.
 
 You can install `node-bcc` using `npm`.
 
-``` bash
+```bash
 npm install --save node-bcc
 ```
 
@@ -31,8 +31,8 @@ For the full (generated) documentation go to [the Documentation](https://node-bc
 
 #### TypeScript
 
-``` typescript
-import {Bcc} from 'node-bcc';
+```typescript
+import { Bcc } from 'node-bcc';
 
 console.log(Bcc.calculate(['A4', '37', 'F6', 'F8', 'CD']));
 // 80
@@ -40,7 +40,7 @@ console.log(Bcc.calculate(['A4', '37', 'F6', 'F8', 'CD']));
 
 #### JavaScript
 
-``` javascript
+```javascript
 const Bcc = require('node-bcc').Bcc;
 
 console.log(Bcc.calculate(['A4', '37', 'F6', 'F8', 'CD']));
@@ -53,8 +53,8 @@ console.log(Bcc.calculate(['A4', '37', 'F6', 'F8', 'CD']));
 
 ##### TypeScript
 
-``` typescript
-import {Hex} from 'node-bcc'
+```typescript
+import { Hex } from 'node-bcc';
 
 console.log(Hex.split('AABBCC'));
 // [AA,BB,CC]
@@ -62,7 +62,7 @@ console.log(Hex.split('AABBCC'));
 
 ##### JavaScript
 
-``` javascript
+```javascript
 const Hex = require('node-bcc').Hex;
 
 console.log(Hex.split('AABBCC'));
@@ -73,8 +73,8 @@ console.log(Hex.split('AABBCC'));
 
 ##### TypeScript
 
-``` typescript
-import {Ascii} from 'node-bcc'
+```typescript
+import { Ascii } from 'node-bcc';
 
 console.log(Ascii.asciiToByteArray('AABBCC'));
 // [65, 66, 67]
@@ -82,7 +82,7 @@ console.log(Ascii.asciiToByteArray('AABBCC'));
 
 ##### JavaScript
 
-``` javascript
+```javascript
 const Ascii = require('node-bcc').Ascii;
 
 console.log(Ascii.asciiToByteArray('AABBCC'));
