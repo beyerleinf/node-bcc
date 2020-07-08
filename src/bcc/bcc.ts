@@ -1,4 +1,4 @@
-import { Helper } from '../helper';
+import {Helper} from '../helper';
 
 /**
  * This class provides methods for calculating the Block Check Character of a
@@ -74,7 +74,6 @@ export class Bcc {
 
     for (const byte of message) {
       if (typeof byte === 'string') {
-        /* tslint:disable-next-line ban */
         bcc ^= parseInt(byte, 16);
       } else {
         bcc ^= byte;

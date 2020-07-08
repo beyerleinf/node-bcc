@@ -1,7 +1,5 @@
 {
-  "src": [
-    "./src"
-  ],
+  "inputFiles": ["./src"],
   "mode": "file",
   "includeDeclarations": true,
   "tsconfig": "tsconfig.json",
@@ -13,5 +11,6 @@
   "ignoreCompilerErrors": true,
   "plugin": "none",
   "listInvalidSymbolLinks": true,
-  "out": "./docs/"
+  "out": "./docs/",
+  "theme": "minimal"
 }

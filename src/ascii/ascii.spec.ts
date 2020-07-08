@@ -1,20 +1,20 @@
-import { expect } from 'chai';
+import {expect} from 'chai';
 import * as sinon from 'sinon';
-
-import { Ascii } from './ascii';
-
-/* tslint:disable no-any */
+import {Ascii} from './ascii';
 
 describe('Ascii', () => {
   describe('asciiToByteArray', () => {
-    let validateStub: any;
+    let sandbox: sinon.SinonSandbox;
+
+    let validateStub: sinon.SinonStub;
 
     beforeEach(() => {
-      validateStub = sinon.stub(Ascii, 'validate');
+      sandbox = sinon.createSandbox();
+      validateStub = sandbox.stub(Ascii, 'validate');
     });
 
     afterEach(() => {
-      validateStub.restore();
+      sandbox.restore();
     });
 
     it('should return correct array when only valid chars in input', () => {

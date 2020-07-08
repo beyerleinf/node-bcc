@@ -1,1 +1,1 @@
-export { Hex } from './hex';
+export {Hex} from './hex';

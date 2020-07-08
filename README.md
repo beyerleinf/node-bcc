@@ -2,7 +2,7 @@
 
 [![Travis](https://img.shields.io/travis/beyerleinf/node-bcc.svg?style=flat-square)](https://travis-ci.org/beyerleinf/node-bcc) [![Codecov](https://img.shields.io/codecov/c/github/beyerleinf/node-bcc.svg?style=flat-square)](https://codecov.io/gh/beyerleinf/node-bcc) [![David](https://img.shields.io/david/beyerleinf/node-bcc.svg?style=flat-square)](https://github.com/beyerleinf/node-bcc) [![David](https://img.shields.io/david/dev/beyerleinf/node-bcc.svg?style=flat-square)](<![David](https://img.shields.io/david/beyerleinf/node-bcc.svg?style=flat-square)>) [![Known Vulnerabilities](https://snyk.io/test/github/beyerleinf/node-bcc/badge.svg?style=flat-square)](https://snyk.io/test/github/beyerleinf/node-bcc)
 
-[![Issue Stats (long form)](https://img.shields.io/issuestats/i/long/github/beyerleinf/node-bcc.svg?style=flat-square)](https://github.com/beyerleinf/node-bcc/issues) [![GitHub issues](https://img.shields.io/github/issues/beyerleinf/node-bcc.svg?style=flat-square)](https://github.com/beyerleinf/node-bcc/issues) [![GitHub pull requests](https://img.shields.io/github/issues-pr/beyerleinf/node-bcc.svg?style=flat-square)](https://github.com/beyerleinf/node-bcc/pulls)  ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/beyerleinf/node-bcc.svg?style=flat-square)
+[![Issue Stats (long form)](https://img.shields.io/issuestats/i/long/github/beyerleinf/node-bcc.svg?style=flat-square)](https://github.com/beyerleinf/node-bcc/issues) [![GitHub issues](https://img.shields.io/github/issues/beyerleinf/node-bcc.svg?style=flat-square)](https://github.com/beyerleinf/node-bcc/issues) [![GitHub pull requests](https://img.shields.io/github/issues-pr/beyerleinf/node-bcc.svg?style=flat-square)](https://github.com/beyerleinf/node-bcc/pulls) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/beyerleinf/node-bcc.svg?style=flat-square)
 
 # node-bcc
 
@@ -11,6 +11,7 @@ This library provides its own TypeScript type definitions.
 
 ## Things to come
 
+- Buffer Support
 - CLI application
 - 0x-prepended strings
 - Add more and better examples
@@ -27,21 +28,10 @@ npm install --save node-bcc
 
 ### Usage
 
-For the full (generated) documentation go to [the Documentation](https://node-bcc.beyerleinf.de)
-
-#### TypeScript
+For the full (generated) documentation go to [the Documentation](https://docs.beyerleinf.de/node-bcc)
 
 ```typescript
-import { Bcc } from 'node-bcc';
-
-console.log(Bcc.calculate(['A4', '37', 'F6', 'F8', 'CD']));
-// 80
-```
-
-#### JavaScript
-
-```javascript
-const Bcc = require('node-bcc').Bcc;
+import {Bcc} from 'node-bcc';
 
 console.log(Bcc.calculate(['A4', '37', 'F6', 'F8', 'CD']));
 // 80
@@ -51,19 +41,8 @@ console.log(Bcc.calculate(['A4', '37', 'F6', 'F8', 'CD']));
 
 #### Hex
 
-##### TypeScript
-
 ```typescript
-import { Hex } from 'node-bcc';
-
-console.log(Hex.split('AABBCC'));
-// [AA,BB,CC]
-```
-
-##### JavaScript
-
-```javascript
-const Hex = require('node-bcc').Hex;
+import {Hex} from 'node-bcc';
 
 console.log(Hex.split('AABBCC'));
 // [AA,BB,CC]
@@ -71,19 +50,8 @@ console.log(Hex.split('AABBCC'));
 
 #### Ascii
 
-##### TypeScript
-
 ```typescript
-import { Ascii } from 'node-bcc';
-
-console.log(Ascii.asciiToByteArray('AABBCC'));
-// [65, 66, 67]
-```
-
-##### JavaScript
-
-```javascript
-const Ascii = require('node-bcc').Ascii;
+import {Ascii} from 'node-bcc';
 
 console.log(Ascii.asciiToByteArray('AABBCC'));
 // [65, 66, 67]

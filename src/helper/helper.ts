@@ -1,5 +1,5 @@
 export class Helper {
-  /* tslint:disable-next-line no-any */
+  /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
   static checkArray(arrayToCheck: any[]): boolean {
     if (!Array.isArray(arrayToCheck)) {
       return false;
