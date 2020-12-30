@@ -1,5 +1,5 @@
-import {expect} from 'chai';
-import {Helper} from './helper';
+import { expect } from 'chai';
+import { Helper } from './helper';
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 

@@ -1,6 +1,6 @@
-import {expect} from 'chai';
+import { expect } from 'chai';
 import * as sinon from 'sinon';
-import {Ascii} from './ascii';
+import { Ascii } from './ascii';
 
 describe('Ascii', () => {
   describe('asciiToByteArray', () => {

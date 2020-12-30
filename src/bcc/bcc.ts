@@ -1,4 +1,4 @@
-import {Helper} from '../helper';
+import { Helper } from '../helper';
 
 /**
  * This class provides methods for calculating the Block Check Character of a

@@ -1,5 +1,5 @@
-import {expect} from 'chai';
-import {Hex} from './hex';
+import { expect } from 'chai';
+import { Hex } from './hex';
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 

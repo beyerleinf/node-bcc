@@ -1,1 +1,1 @@
-export {Bcc} from './bcc';
+export { Bcc } from './bcc';
