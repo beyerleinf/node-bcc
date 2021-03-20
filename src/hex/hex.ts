@@ -25,9 +25,8 @@ export class Hex {
    * ```
    *
    * @static
-   * @param {string} hex
-   * @returns {string[]|null}
-   * @memberof Hex
+   * @param hex The hexadecimal string to split.
+   * @returns An array of hex strings.
    */
   static split(hex: string): string[] | null {
     const chunks: string[] = [];
@@ -47,9 +46,8 @@ export class Hex {
    * Validates the given hexadecimal string.
    *
    * @static
-   * @param {string} hex The hexadecimal string to validate.
-   * @returns {boolean} Whether the given string is a valid hexadecimal string.
-   * @memberof Hex
+   * @param hex The hexadecimal string to validate.
+   * @returns Whether the given string is a valid hexadecimal string.
    */
   static validate(hex: string): boolean {
     const regExp = /^[-+]?[0-9A-Fa-f]+\.?[0-9A-Fa-f]*?$/;
@@ -65,10 +63,9 @@ export class Hex {
    * Converts the given array of numbers to a hexadecimal string.
    *
    * @static
-   * @param {number[]} array The array to convert.
-   * @param {boolean} [uppercase] Whether the string should be uppercase.
-   * @returns {string|null} The given array of numbers as a hexadecimal string.
-   * @memberof Hex
+   * @param array The array to convert.
+   * @param uppercase Whether the string should be uppercase.
+   * @returns  The given array of numbers as a hexadecimal string.
    */
   static toHexString(array: number[], uppercase?: boolean): string | null {
     let result = '';
