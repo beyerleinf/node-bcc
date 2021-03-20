@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.4.0](https://github.com/beyerleinf/node-bcc/compare/v2.3.2...v2.4.0) (2021-03-20)
+
+
+### Features
+
+* Implement buffer support ([19a2272](https://github.com/beyerleinf/node-bcc/commit/19a22722688c475c716bc1e92fadce8a53e04a98))
+
 ### [2.3.2](https://github.com/beyerleinf/node-bcc/compare/v2.3.1...v2.3.2) (2020-12-31)
 
 ### [2.3.1](https://github.com/beyerleinf/node-bcc/compare/v2.3.0...v2.3.1) (2020-12-31)
