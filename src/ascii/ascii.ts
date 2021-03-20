@@ -5,9 +5,8 @@ export class Ascii {
    * ASCII spec is encountered, a SUB (`0x1A`hex / `26`dec) is inserted. We
    * recommend using {@link Ascii.validate} to validate the input first.
    *
-   * @param {string} input
-   * @returns {number[]} An array that contains the character codes.
-   * @memberof Hex
+   * @param input The string to convert.
+   * @returns An array that contains the character codes.
    */
   static asciiToByteArray(input: string): number[] {
     const array: number[] = [];
@@ -28,9 +27,8 @@ export class Ascii {
    * Validates the given `input` to make sure it only contains ASCII characters.
    *
    * @static
-   * @param {string} input The string to validate.
-   * @returns {boolean}
-   * @memberof Ascii
+   * @param input The string to validate.
+   * @returns Whether the given string is valid.
    */
   static validate(input: string): boolean {
     let result = true;

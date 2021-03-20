@@ -22,8 +22,8 @@ export class Bcc {
    * `4`
    *
    * @static
-   * @param {string[]} message The bytes of the message as a hex string array.
-   * @returns {number}
+   * @param message The bytes of the message as a hex string array.
+   * @returns The calculated BCC.
    */
   static calculate(message: string[]): number;
 
@@ -34,50 +34,45 @@ export class Bcc {
    * ### Example
    *
    * ``` ts
-   * console.log(calculateBcc([1, 2, 3, 4]));
+   * console.log(Bcc.calculate([1, 2, 3, 4]));
    * ```
    *
    * ### Output
    * `4`
    *
    * @static
-   * @param {number[]} message The bytes of the message as a number array.
-   * @returns {number}
+   * @param message The bytes of the message as a number array.
+   * @returns The calculated BCC.
    */
   static calculate(message: number[]): number;
 
   /**
-   * This function calculates a Block Check Character for the given array.
+   * This function calculates a Block Check Character for the buffer.
    *
    * ### Example
    *
-   * ``` ts
-   * console.log(calculateBcc(['01', '02', '03', '04']));
-   * ```
-   * ``` ts
-   * console.log(calculateBcc([1, 2, 3, 4]));
+   * ```ts
+   * console.log(Bcc.calculate(Buffer.from([1, 2, 3, 4])))
    * ```
    *
    * ### Output
    * `4`
    *
    * @static
-   * @param {string[]|number[]} message The bytes of the message as a hex string array or as a number array.
-   * @returns {number}
+   * @param message The bytes of the message as a buffer.
+   * @returns The calculated BCC.
    */
-  static calculate(message: string[] | number[]): number {
+  static calculate(message: Buffer): number;
+
+  static calculate(message: string[] | number[] | Buffer): number {
     let bcc = 0x00;
 
-    if (!Helper.checkArray(message)) {
+    if (!Buffer.isBuffer(message) && !Helper.checkArray(message)) {
       return -1;
     }
 
     for (const byte of message) {
-      if (typeof byte === 'string') {
-        bcc ^= parseInt(byte, 16);
-      } else {
-        bcc ^= byte;
-      }
+      bcc ^= typeof byte === 'string' ? parseInt(byte, 16) : byte;
     }
 
     return bcc;
