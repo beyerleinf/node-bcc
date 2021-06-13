@@ -1,5 +1,13 @@
 name: Node Workflow
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - '**'
+    tags-ignore:
+      - 'v*'
+    pull_request:
+      branches:
+        - 'main'
 
 jobs:
   build:

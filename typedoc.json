@@ -9,5 +9,5 @@
   "plugin": "none",
   "listInvalidSymbolLinks": true,
   "out": "./docs/",
-  "theme": "minimal"
+  "theme": "default"
 }
